@@ -21,6 +21,8 @@ jobs:
         with:
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
           privateKey: ${{ secrets.HP_DEMO}}
+      - name: Dist download
+        uses: horochx/deploy-via-scp@master      
           command: |
             ls
             scp -i ubuntu-geppetto.pem -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
