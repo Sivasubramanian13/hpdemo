@@ -16,8 +16,8 @@ jobs:
   Dist:
     runs-on: ubuntu-latest
     steps: 
-      - name: Dist download
-        uses: appleboy/scp-action@master
+      # - name: Dist download
+      #   uses: appleboy/scp-action@master
         with:
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
           privateKey: ${{ secrets.HP_DEMO}}      
