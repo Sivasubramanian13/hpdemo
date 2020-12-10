@@ -24,5 +24,6 @@ jobs:
         uses: JimCronqvist/action-ssh@master
         with:
           privateKey: ${{ secrets.HP_DEMO}}
+      - name: Download dist file
       - run: 
-           ls
+          scp -i ubuntu-geppetto.pem -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest
