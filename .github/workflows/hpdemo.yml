@@ -23,6 +23,10 @@ jobs:
           privateKey: ${{ secrets.HP_DEMO}}
       - run:
           docker ps -a
+      - name: Folders
+      - run: |
+          cd nissan_new
+          ls
 # Upload_S3:
 #     runs-on: ubuntu-latest
 #             needs: login
