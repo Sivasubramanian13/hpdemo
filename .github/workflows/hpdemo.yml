@@ -15,7 +15,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  login:
+  # This workflow contains a single job called "build"
+  build:
+  
     runs-on: ubuntu-latest
     steps: 
       - name: Execute SSH commmands on remote server
@@ -23,11 +25,6 @@ jobs:
         with:
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
           privateKey: ${{ secrets.HP_DEMO}}
-          run:
-            docker ps -a
-# Upload_S3:
-#     runs-on: ubuntu-latest
-#             needs: login
-#             steps:
-#             - name: Check the  branch
-#               uses: actions/checkout@v2      
+      - run: 
+          docker ps -a
+           
