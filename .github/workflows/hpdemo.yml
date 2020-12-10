@@ -20,12 +20,12 @@ jobs:
         uses: JimCronqvist/action-ssh@master
         with:
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
-          privateKey: ${{ secrets.HP_DEMO}}
+          privateKey: ${{ secrets.HP_DEMO}}      
+          command: |
+            ls
+            scp -i -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest .
       - name: Dist download
-        uses: horochx/deploy-via-scp@master      
-        command: |
-          ls
-          scp -i-r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
+        uses: horochx/deploy-via-scp@master 
       
   # Upload_S3:
   #   runs-on: ubuntu-latest
