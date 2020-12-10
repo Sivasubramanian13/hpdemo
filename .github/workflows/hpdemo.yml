@@ -24,5 +24,6 @@ jobs:
         uses: JimCronqvist/action-ssh@master
         with:
           privateKey: ${{ secrets.HP_DEMO}}
-      - run:
-           docker ps -a  
+      - run: |
+          cd nissan_new
+          ls 
