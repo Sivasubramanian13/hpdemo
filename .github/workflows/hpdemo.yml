@@ -24,6 +24,5 @@ jobs:
         uses: JimCronqvist/action-ssh@master
         with:
           privateKey: ${{ secrets.HP_DEMO}}
-      - run: |
-          cd nissan_new
-          ls 
+      - run: 
+           ls
