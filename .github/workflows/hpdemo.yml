@@ -23,10 +23,10 @@ jobs:
           privateKey: ${{ secrets.HP_DEMO}}
       
 Upload_S3:
-    runs-on: ubuntu-latest
-            needs: login
-            steps:
-            - name: Check the  branch
-              uses: actions/checkout@v2 
-            - name: Dist download
-            - run: scp -i ubuntu-geppetto.pem -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest .    
+  runs-on: ubuntu-latest
+  needs: login
+  steps:
+  - name: Check the  branch
+    uses: actions/checkout@v2 
+  - name: Dist download
+  - run: scp -i ubuntu-geppetto.pem -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest .    
