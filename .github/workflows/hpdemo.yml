@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Download
-        with:
-          hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
-          command: 
-            scp -i HP_DEMO-r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
+        # with:
+          # hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
+        run: 
+          scp -i HP_DEMO-r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
             
   # Upload_S3:
   #   runs-on: ubuntu-latest
