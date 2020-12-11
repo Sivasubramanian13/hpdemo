@@ -18,12 +18,12 @@ jobs:
     steps: 
       # - name: Download
       #   uses: JimCronqvist/action-ssh@master
-      - name: demo
-        run: mkdir test
+#       - name: demo
+#         run: mkdir test
       - name: Dist download
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: test
+#           local: test
           remote: scp/home/ubuntu/hpsiva/dist/quoteomatictest/index.html
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
           privateKey: ${{ secrets.HP_DEMO}}   
