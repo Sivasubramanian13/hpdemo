@@ -23,9 +23,10 @@ jobs:
       - name: Dist download
         uses: appleboy/scp-action@master
         env:
-          HOST: ${{ secrets.HOST_KEY}}
-          PORT: 22
-          KEY: ${{ secrets.HP_DEMO}}  
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.KEY }}
         with:
           source: "/home/runner/work/hpdemo/hpdemo"
           target: "/home/ubuntu/hpsiva/dist/quoteomatictest"  
