@@ -28,19 +28,16 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.KEY }}
         with:
-          source: "/home/runner/work/hpdemo/hpdemo"
-          target: "/home/ubuntu/hpsiva/dist/quoteomatictest"  
+          source: "/home/ubuntu/hpsiva/dist/quoteomatictest"
+          target: "/home/runner/work/hpdemo/hpdemo" 
           strip_components: 1
-  
+ 
       - name: View files
         run: |
+          cd /home/runner/work/hpdemo/hpdemo
           pwd
           ls
-          # command: |
-          #   # docker ps -a   
-          #   ls   
-          #   scp -i  ${{ secrets.HP_DEMO}} -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
-            
+         
   # Upload_S3:
   #   runs-on: ubuntu-latest
   #   needs: login
