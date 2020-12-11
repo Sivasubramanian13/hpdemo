@@ -31,6 +31,11 @@ jobs:
           source: "/home/runner/work/hpdemo/hpdemo"
           target: "/home/ubuntu/hpsiva/dist/quoteomatictest"  
           strip_components: 1
+  
+      - name: View files
+        run: |
+          pwd
+          ls
           # command: |
           #   # docker ps -a   
           #   ls   
