@@ -20,7 +20,7 @@ jobs:
         # with:
           # hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
         run: 
-          scp -i -F HP_DEMo ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
+          scp -i -F HP_DEMO ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
             
   # Upload_S3:
   #   runs-on: ubuntu-latest
