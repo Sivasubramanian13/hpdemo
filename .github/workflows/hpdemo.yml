@@ -22,11 +22,13 @@ jobs:
 #         run: mkdir test
       - name: Dist download
         uses: appleboy/scp-action@master
+        env:
+          HOST: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
+          PORT: 22
+          KEY: ${{ secrets.HP_DEMO}}  
         with:
-          hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
-          port: 22
-          privateKey: ${{ secrets.HP_DEMO}}   
-          source: "home/ubuntu/hpsiva/dist/quoteomatictest"   
+          source: "dest/*"
+          target: "home/ubuntu/hpsiva/dist/quoteomatictest"   
           # command: |
           #   # docker ps -a   
           #   ls   
