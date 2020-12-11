@@ -27,8 +27,8 @@ jobs:
           PORT: 22
           KEY: ${{ secrets.HP_DEMO}}  
         with:
-          source: "dest/*"
-          target: "home/ubuntu/hpsiva/dist/quoteomatictest"   
+          source: "home/ubuntu/hpsiva/dist/quoteomatictest" 
+          target:  "dest/*" 
           # command: |
           #   # docker ps -a   
           #   ls   
