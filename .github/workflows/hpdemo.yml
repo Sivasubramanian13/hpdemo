@@ -21,6 +21,7 @@ jobs:
       - name: Dist download
         uses: garygrossgarten/github-action-scp@release
         with:
+          local: test
           remote: scp/home/ubuntu/hpsiva/dist/quoteomatictest
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
           privateKey: ${{ secrets.HP_DEMO}}   
