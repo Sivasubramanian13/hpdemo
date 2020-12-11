@@ -16,14 +16,11 @@ jobs:
   Dist:
     runs-on: ubuntu-latest
     steps: 
-      - name: install ssh
-        run: sudo apt-get update && sudo apt-get -y install openssh-client && sudo apt-get -y install sshpass
-      - name: login ssh
-        run: sshpass -p siva@123 ssh -o "StrictHostKeyChecking no" -P ubuntu@"34.197.46.177" 
-      - name: copy the war file
-        run: sshpass -V && export SSHPASS=siva@123 && sshpass -e scp -o stricthostkeychecking=no /home/ubuntu/hpsiva/dist/quoteomatictest
-          # command: 
-          #   scp -i ubuntu-geppetto.pem -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
+      - name: Download
+        with:
+          hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
+          command: 
+            scp -i HP_DEMO-r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
             
   # Upload_S3:
   #   runs-on: ubuntu-latest
