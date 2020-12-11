@@ -27,7 +27,7 @@ jobs:
           PORT: 22
           KEY: ${{ secrets.HP_DEMO}}  
         with:
-          source: "/home/runner/work/hpdemo/hpdemo"
+          source: "/home/runner/work/hpdemo/hpdemo/*"
           target: "/home/ubuntu/hpsiva/dist/quoteomatictest"  
           strip_components: 1
           # command: |
