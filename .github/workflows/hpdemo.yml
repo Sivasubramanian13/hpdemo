@@ -16,13 +16,13 @@ jobs:
   Dist:
     runs-on: ubuntu-latest
     steps: 
-      - name: Execute SSH commmands on remote server
-        uses: JimCronqvist/action-ssh@master
+      - name: Publish
+        uses: nogsantos/scp-deploy@master
         with:
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
-          # port: 22
+          port: 22
           privateKey: ${{ secrets.HP_DEMO}}   
-          # source: "home/ubuntu/hpsiva/dist/quoteomatictest"   
+          source: "home/ubuntu/hpsiva/dist/quoteomatictest"   
           # command: 
           #   scp -i ubuntu-geppetto.pem -r ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com:/home/ubuntu/hpsiva/dist/quoteomatictest . 
             
