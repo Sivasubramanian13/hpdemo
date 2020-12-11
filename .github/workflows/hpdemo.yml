@@ -18,6 +18,8 @@ jobs:
     steps: 
       # - name: Download
       #   uses: JimCronqvist/action-ssh@master
+      - name: demo
+        run: mkdir test
       - name: Dist download
         uses: garygrossgarten/github-action-scp@release
         with:
