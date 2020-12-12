@@ -20,16 +20,14 @@ jobs:
 #         uses: JimCronqvist/action-ssh@master
       - name: demo
         run: mkdir test
-      - name: Dist download
-        uses: garygrossgarten/github-action-scp@release
+      - name: Execute SSH commmands on remote server
+        uses: JimCronqvist/action-ssh@master
         with:
-          local: test
-          remote: scp/home/ubuntu/hpsiva/dist/quoteomatictest
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.KEY }}
- 
+          hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
+          privateKey: ${{ secrets.KEY}}      
+          command: |
+            docker cp quoteomaticui-wp:/app/dist/quoteomatictest /test
+            ls
 #       - name: View files
 #         run: |
 #           cd /home/runner/work/hpdemo/hpdemo
