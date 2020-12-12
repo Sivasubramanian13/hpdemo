@@ -28,7 +28,7 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.KEY }}
         with:
-          source: "/home/ubuntu/hpsiva/dist/quoteomatictest"
+          source: "/home/ubuntu/hpsiva/dist/quoteomatictest/index.html"
           target: "/test" 
           strip_components: 1
  
