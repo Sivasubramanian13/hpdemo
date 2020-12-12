@@ -26,7 +26,7 @@ jobs:
           hosts: 'ubuntu@ec2-34-197-46-177.compute-1.amazonaws.com'
           privateKey: ${{ secrets.KEY}}      
           command: |
-            docker cp quoteomaticui-wp:/app/dist/quoteomatictest /test
+            docker cp quoteomaticui-wp:/app/dist/quoteomatictest /home/runner/work/hpdemo/hpdemo/test
             ls
 #       - name: View files
 #         run: |
