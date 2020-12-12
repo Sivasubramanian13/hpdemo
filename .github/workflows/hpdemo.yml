@@ -16,8 +16,8 @@ jobs:
   Dist:
     runs-on: ubuntu-latest
     steps: 
-      # - name: Download
-      #   uses: JimCronqvist/action-ssh@master
+      - name: Download
+        uses: JimCronqvist/action-ssh@master
 #       - name: demo
 #         run: mkdir test
       - name: Dist download
@@ -32,11 +32,11 @@ jobs:
           target: "/home/runner/work/hpdemo/hpdemo" 
           strip_components: 1
  
-      - name: View files
-        run: |
-          cd /home/runner/work/hpdemo/hpdemo
-          pwd
-          ls
+#       - name: View files
+#         run: |
+#           cd /home/runner/work/hpdemo/hpdemo
+#           pwd
+#           ls
          
   # Upload_S3:
   #   runs-on: ubuntu-latest
