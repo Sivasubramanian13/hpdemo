@@ -31,8 +31,8 @@ jobs:
             git checkout feature/wordpress_deploy
             ls
             cd application/client/desktop/quoteomatictest
-            docker build -t newquoteuihp .
-            docker run --name quoteomaticuihp --restart=unless-stopped -d -p 5059:5000 -v newhp:/app newquoteuihp
+            docker build -t newquoteui-hpnew .
+            docker run --name quoteomaticui-hpnew --restart=unless-stopped -d -p 5080:5000 -v new-hp:/app newquoteui-hpnew
             docker ps -a
             
          
