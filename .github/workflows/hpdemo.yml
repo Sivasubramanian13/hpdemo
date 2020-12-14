@@ -31,6 +31,10 @@ jobs:
             git checkout feature/wordpress_deploy
             git branch -a
             ls
+            cd application/client/desktop/quoteomatictest
+            docker build -t newquoteuihp .
+            docker run --name quoteomaticuihp --restart=unless-stopped -d -p 5059:5000 -v newhp:/app newquoteuihp
+            docker ps -a
             
          
   # Upload_S3:
