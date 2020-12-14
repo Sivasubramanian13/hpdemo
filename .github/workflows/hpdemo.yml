@@ -27,7 +27,7 @@ jobs:
           privateKey: ${{ secrets.KEY}}      
           command: |
             cd hp_wordpress
-            git pull https://github.com/dan-castillo/nissan-demo.git
+            git pull git@github.com/dan-castillo/nissan-demo.git
             git checkout feature/wordpress_deploy
             git branch
          
