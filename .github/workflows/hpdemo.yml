@@ -25,9 +25,10 @@ jobs:
           privateKey: ${{ secrets.KEY}}      
           command: |
             cd hp_wordpress
+            cd nissan-demo
             git init
-            git pull https://Sivasubramanian13:Siva@1313@github.com/dan-castillo/nissan-demo.git
-            git branch -a
+            git pull git@github.com:dan-castillo/nissan-demo.git
+            git checkout feature/wordpress_deploy
             
          
   # Upload_S3:
