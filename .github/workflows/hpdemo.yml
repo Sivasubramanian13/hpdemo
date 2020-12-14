@@ -25,6 +25,7 @@ jobs:
           privateKey: ${{ secrets.KEY}}      
           command: |
             cd hp_wordpress
+            git init
             git https://Sivasubramanian13:Siva@1313@github.com/dan-castillo/nissan-demo.git
             git branch -a
             
