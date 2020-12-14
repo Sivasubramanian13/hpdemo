@@ -29,6 +29,8 @@ jobs:
             git init
             git pull git@github.com:dan-castillo/nissan-demo.git
             git checkout feature/wordpress_deploy
+            git branch -a
+            ls
             
          
   # Upload_S3:
