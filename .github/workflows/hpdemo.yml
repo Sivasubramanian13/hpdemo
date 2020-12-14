@@ -28,9 +28,7 @@ jobs:
           command: |
             cd hp_wordpress
             git pull git@github.com/dan-castillo/nissan-demo.git
-            cd nissan-demo
-            git checkout feature/wordpress_deploy
-            git branch
+            
          
   # Upload_S3:
   #   runs-on: ubuntu-latest
