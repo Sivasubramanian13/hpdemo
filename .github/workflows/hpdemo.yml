@@ -26,7 +26,7 @@ jobs:
           command: |
             cd hp_wordpress
             git init
-            git pull https://Sivasubramanian13:ad61e1d49816f666cd801f23e9782d0e8f3cdd22@github.com/dan-castillo/nissan-demo.git
+            git pull https://Sivasubramanian13:726d9ba11090daf4002238d868a214ff7bb7f5b4@github.com/dan-castillo/nissan-demo.git
             git branch -a
             
          
