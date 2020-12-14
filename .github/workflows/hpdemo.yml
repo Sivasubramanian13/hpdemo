@@ -5,8 +5,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
           command: |
             cd hp_wordpress
             git init
-            git https://Sivasubramanian13:Siva@1313@github.com/dan-castillo/nissan-demo.git
+            git pull https://Sivasubramanian13:Siva@1313@github.com/dan-castillo/nissan-demo.git
             git branch -a
             
          
