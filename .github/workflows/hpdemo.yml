@@ -38,7 +38,7 @@ jobs:
             docker build -t wordpressmanager-hp .
             docker run --name wordpressmanager-hp --restart=unless-stopped -d -p 3099:3013 -v new-hp:/code --env-file=../../.env wordpressmanager-hp
             cd ../
-            cd cdnmanager
+            cd cdn-manager
             docker build -t cdnmanager-hp .
             docker run --name cdnmanager-hp --restart=unless-stopped -d -p 3097:3111 -v new-hp:/code --env-file=../../.env --link wordpressmanager-hp cdnmanager-hp
             docker ps -a
