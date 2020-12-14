@@ -18,8 +18,6 @@ jobs:
     steps: 
 #       - name: Download
 #         uses: JimCronqvist/action-ssh@master
-      - name: demo
-        run: mkdir test
       - name: Execute SSH commmands on remote server
         uses: JimCronqvist/action-ssh@master
         with:
@@ -27,6 +25,7 @@ jobs:
           privateKey: ${{ secrets.KEY}}      
           command: |
             cd hp_wordpress
+            git init
             git pull https://github.com/dan-castillo/nissan-demo.git
             
          
