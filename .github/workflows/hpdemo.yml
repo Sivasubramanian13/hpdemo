@@ -13,7 +13,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  Dist:
+  HP:
     runs-on: ubuntu-latest
     steps: 
 #       - name: Download
@@ -28,6 +28,7 @@ jobs:
           command: |
             cd hp_wordpress
             git pull git@github.com/dan-castillo/nissan-demo.git
+            cd nissan-demo
             git checkout feature/wordpress_deploy
             git branch
          
