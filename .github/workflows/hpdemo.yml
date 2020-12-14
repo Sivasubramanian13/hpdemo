@@ -27,6 +27,7 @@ jobs:
             cd hp_wordpress
             git init
             git pull git@github.com:dan-castillo/nissan-demo.git
+            git branch -a
             
          
   # Upload_S3:
