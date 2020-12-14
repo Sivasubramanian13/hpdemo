@@ -27,7 +27,7 @@ jobs:
           privateKey: ${{ secrets.KEY}}      
           command: |
             cd hp_wordpress
-            git pull git@github.com:dan-castillo/nissan-demo.git
+            git pull https://github.com/dan-castillo/nissan-demo.git
             
          
   # Upload_S3:
