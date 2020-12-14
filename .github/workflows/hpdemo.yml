@@ -29,11 +29,10 @@ jobs:
             git init
             git pull git@github.com:dan-castillo/nissan-demo.git
             git checkout feature/wordpress_deploy
-            git branch -a
             ls
             cd application/client/desktop/quoteomatictest
-            docker build -t newquoteuihp .
-            docker run --name quoteomaticuihp --restart=unless-stopped -d -p 5059:5000 -v newhp:/app newquoteuihp
+            sudo docker build -t newquoteuihp .
+            sudo docker run --name quoteomaticuihp --restart=unless-stopped -d -p 5059:5000 -v newhp:/app newquoteuihp
             docker ps -a
             
          
